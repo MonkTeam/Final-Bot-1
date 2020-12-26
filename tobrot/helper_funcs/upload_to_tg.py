@@ -257,7 +257,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
             #reply_to_message_id=message.reply_to_message.message_id,
             progress=progress_for_pyrogram,
             progress_args=(
-                "𝙏𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙪𝙥𝙡𝙤𝙖𝙙"\n",
+                "𝙏𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙪𝙥𝙡𝙤𝙖𝙙",\n
                 message_for_progress_display,
                 start_time
             )
@@ -345,7 +345,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                         #reply_to_message_id=message.reply_to_message.message_id,
                         progress=progress_for_pyrogram,
                         progress_args=(
-                            "𝙏𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙪𝙥𝙡𝙤𝙖𝙙"\n",
+                            "𝙏𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙪𝙥𝙡𝙤𝙖𝙙",\n
                             message_for_progress_display,
                             start_time
                         )
@@ -401,7 +401,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                         #reply_to_message_id=message.reply_to_message.message_id,
                         progress=progress_for_pyrogram,
                         progress_args=(
-                            "𝙏𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙪𝙥𝙡𝙤𝙖𝙙"\n",
+                            "𝙏𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙪𝙥𝙡𝙤𝙖𝙙",\n
                             message_for_progress_display,
                             start_time
                         )
@@ -443,7 +443,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                         #reply_to_message_id=message.reply_to_message.message_id,
                         progress=progress_for_pyrogram,
                         progress_args=(
-                            "𝙏𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙪𝙥𝙡𝙤𝙖𝙙"\n,
+                            "𝙏𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙪𝙥𝙡𝙤𝙖𝙙",\n
                             message_for_progress_display,
                             start_time
                         )
