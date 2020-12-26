@@ -31,6 +31,8 @@ from tobrot.helper_funcs.youtube_dl_extractor import extract_youtube_dl_formats
 from tobrot.helper_funcs.admin_check import AdminCheck
 from tobrot.helper_funcs.ytplaylist import yt_playlist_downg
 from tobrot.helper_funcs.cloneHelper import CloneHelper
+from tobrot.helper_funcs.download import download_tg
+from tobrot.helper_funcs.upload_to_tg import upload_to_tg
 
 async def incoming_purge_message_f(client, message):
     """/purge command"""
@@ -45,19 +47,21 @@ async def incoming_purge_message_f(client, message):
 
 async def incoming_message_f(client, message):
     """/leech command"""
+    g_id = message.from_user.id
+    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
     i_m_sefg = await message.reply_text("processing", quote=True)
     is_zip = False
     is_unzip = False
     is_unrar = False
     is_untar = False
     if len(message.command) > 1:
-        if message.command[1] == "archive":
+        if message.command[1].lower() == "archive":
             is_zip = True
-        elif message.command[1] == "unzip":
+        elif message.command[1].lower() == "unzip":
             is_unzip = True
-        elif message.command[1] == "unrar":
+        elif message.command[1].lower() == "unrar":
             is_unrar = True
-        elif message.command[1] == "untar":
+        elif message.command[1].lower() == "untar":
             is_untar = True
     # get link from the incoming message
     dl_url, cf_name, _, _ = await extract_link(message.reply_to_message, "LEECH")
@@ -103,19 +107,21 @@ async def incoming_message_f(client, message):
 #
 async def incoming_gdrive_message_f(client, message):
     """/gleech command"""
+    g_id = message.from_user.id
+    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
     i_m_sefg = await message.reply_text("processing", quote=True)
     is_zip = False
     is_unzip = False
     is_unrar = False
     is_untar = False
     if len(message.command) > 1:
-        if message.command[1] == "archive":
+        if message.command[1].lower() == "archive":
             is_zip = True
-        elif message.command[1] == "unzip":
+        elif message.command[1].lower() == "unzip":
             is_unzip = True
-        elif message.command[1] == "unrar":
+        elif message.command[1].lower() == "unrar":
             is_unrar = True
-        elif message.command[1] == "untar":
+        elif message.command[1].lower() == "untar":
             is_untar = True
     # get link from the incoming message
     dl_url, cf_name, _, _ = await extract_link(message.reply_to_message, "GLEECH")
@@ -159,6 +165,8 @@ async def incoming_gdrive_message_f(client, message):
 
 async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
+    g_id = message.from_user.id
+    credit = await message.reply_text(f"💀 Downloading for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
     i_m_sefg = await message.reply_text("processing", quote=True)
     # LOGGER.info(message)
     # extract link from message
@@ -240,10 +248,10 @@ async def g_clonee(client, message):
         await gclone.gcl()
         await gclone.link_gen_size()
     else:
-        await message.reply_text("<b>😡FCUK!What have you entered 😒:You should reply to a message, which format should be [ID of Gdrive file/folder Name of the file/folder]\nOr read Github for detailled information</b>")
-        
-        
-       async def rename_tg_file(client, message):
+        await message.reply_text("You should reply to a message, which format should be [ID of Gdrive file/folder Name of the file/folder]\nOr read Github for detailled information")
+
+
+async def rename_tg_file(client, message):
     usr_id = message.from_user.id
     if len(message.command) > 1:
         new_name = '/app/' + message.text.split(" ", maxsplit=1)[1].strip()
