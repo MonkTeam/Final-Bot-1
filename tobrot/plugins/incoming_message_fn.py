@@ -48,8 +48,8 @@ async def incoming_purge_message_f(client, message):
 async def incoming_message_f(client, message):
     """/leech command"""
     g_id = message.from_user.id
-    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
-    i_m_sefg = await message.reply_text("processing", quote=True)
+    credit = await message.reply_text(f"𝙇𝙚𝙚𝙘𝙝𝙞𝙣𝙜 𝙛𝙤𝙧 𝙮𝙤𝙪 <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
+    i_m_sefg = await message.reply_text("𝙇𝙤𝙖𝙙𝙞𝙣𝙜", quote=True)
     is_zip = False
     is_unzip = False
     is_unrar = False
@@ -82,7 +82,7 @@ async def incoming_message_f(client, message):
         # create download directory, if not exist
         if not os.path.isdir(new_download_location):
             os.makedirs(new_download_location)
-        await i_m_sefg.edit_text("trying to download")
+        await i_m_sefg.edit_text("𝙏𝙧𝙮𝙞𝙣𝙜 2 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙")
         # try to download the "link"
         sagtus, err_message = await call_apropriate_function(
             aria_i_p,
@@ -108,8 +108,8 @@ async def incoming_message_f(client, message):
 async def incoming_gdrive_message_f(client, message):
     """/gleech command"""
     g_id = message.from_user.id
-    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
-    i_m_sefg = await message.reply_text("processing", quote=True)
+    credit = await message.reply_text(f"𝙇𝙚𝙚𝙘𝙝𝙞𝙣𝙜 𝙛𝙤𝙧 𝙮𝙤𝙪 <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
+    i_m_sefg = await message.reply_text("𝙇𝙤𝙖𝙙𝙞𝙣𝙜", quote=True)
     is_zip = False
     is_unzip = False
     is_unrar = False
@@ -142,7 +142,7 @@ async def incoming_gdrive_message_f(client, message):
         # create download directory, if not exist
         if not os.path.isdir(new_download_location):
             os.makedirs(new_download_location)
-        await i_m_sefg.edit_text("trying to download")
+        await i_m_sefg.edit_text("𝙏𝙧𝙮𝙞𝙣𝙜 2 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙")
         # try to download the "link"
         await call_apropriate_function_g(
             aria_i_p,
@@ -166,7 +166,7 @@ async def incoming_gdrive_message_f(client, message):
 async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
     g_id = message.from_user.id
-    credit = await message.reply_text(f"💀 Downloading for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
+    credit = await message.reply_text(f"𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙛𝙤𝙧 𝙮𝙤𝙪 <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
     i_m_sefg = await message.reply_text("processing", quote=True)
     # LOGGER.info(message)
     # extract link from message
