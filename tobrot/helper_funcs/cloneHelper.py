@@ -145,8 +145,8 @@ class CloneHelper:
                 button.append([pyrogram.InlineKeyboardButton(text="ℹ️ IndexUrl ℹ️", url=f"{tam_link}")])
             button_markup = pyrogram.InlineKeyboardMarkup(button)
             msg = await self.lsg.edit_text(
-                f"🤖: {_up} cloned successfully in your Cloud <a href='tg://user?id={self.u_id}'>🤒</a>\
-                \n📀 Info: Calculating...",
+                f"🤖: {_up} 𝘾𝙡𝙤𝙣𝙚𝙙 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝙞𝙣 𝙮𝙤𝙪𝙧 𝘾𝙡𝙤𝙪𝙙 <a href='tg://user?id={self.u_id}'>🤒</a>\
+                \n📀 Info: 𝘾𝙖𝙡𝙘𝙪𝙡𝙖𝙩𝙞𝙣𝙜...",
                 reply_markup=button_markup,
                 parse_mode="html"
             )
@@ -168,7 +168,7 @@ class CloneHelper:
             LOGGER.info(am.decode('utf-8'))
             await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
             await msg.edit_text(
-                f"🤖: {_up} cloned successfully in your Cloud <a href='tg://user?id={self.u_id}'>🤒</a>\
+                f"🤖: {_up} 𝘾𝙡𝙤𝙣𝙚𝙙 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝙞𝙣 𝙮𝙤𝙪𝙧 𝘾𝙡𝙤𝙪𝙙 <a href='tg://user?id={self.u_id}'>🤒</a>\
                 \n📀 Info:\n{g_autam}",
                 reply_markup=button_markup,
                 parse_mode="html"
@@ -177,7 +177,7 @@ class CloneHelper:
             
 		
     async def gcl(self):
-        self.lsg = await self.mess.reply_text(f"Cloning...you should wait 🤒")
+        self.lsg = await self.mess.reply_text(f"𝘾𝙡𝙤𝙣𝙞𝙣𝙜...𝙮𝙤𝙪 𝙨𝙝𝙤𝙪𝙡𝙙 𝙬𝙖𝙞𝙩 🤒")
         destination = f'{DESTINATION_FOLDER}'
         cmd = [
             "/app/gautam/gclone",
