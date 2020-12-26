@@ -167,7 +167,7 @@ async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
     g_id = message.from_user.id
     credit = await message.reply_text(f"𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙛𝙤𝙧 𝙮𝙤𝙪 <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
-    i_m_sefg = await message.reply_text("processing", quote=True)
+    i_m_sefg = await message.reply_text("𝙇𝙤𝙖𝙙𝙞𝙣𝙜...", quote=True)
     # LOGGER.info(message)
     # extract link from message
     dl_url, cf_name, yt_dl_user_name, yt_dl_pass_word = await extract_link(
