@@ -90,10 +90,10 @@ async def status_message_f(client, message):
     used = humanbytes(used)
     free = humanbytes(free)
 
-    ms_g = f"<b>Bot Uptime</b>: <code>{currentTime}</code>\n" \
-        f"<b>Total disk space</b>: <code>{total}</code>\n" \
-        f"<b>Used</b>: <code>{used}</code>\n" \
-        f"<b>Free</b>: <code>{free}</code>\n"
+    ms_g = f"<b>➽ 𝘽𝙤𝙩 𝙐𝙥𝙩𝙞𝙢𝙚</b>: <code>{currentTime}</code>\n\n" \
+        f"<b>➽ 𝙏𝙤𝙩𝙖𝙡 𝙙𝙞𝙨𝙠 𝙨𝙥𝙖𝙘𝙚</b>: <code>{total}</code>\n\n" \
+        f"<b>➽ 𝙐𝙨𝙚𝙙</b>: <code>{used}</code>\n\n" \
+        f"<b>➽ 𝙁𝙧𝙚𝙚</b>: <code>{free}</code>\n"
     #LOGGER.info(ms_g)
 
     msg = ms_g + "\n" + msg
@@ -120,7 +120,7 @@ async def cancel_message_f(client, message):
             LOGGER.info(downloads)
             LOGGER.info(downloads.remove(force=True, files=True))
             await i_m_s_e_g.edit_text(
-                "Leech Cancelled"
+                "𝙇𝙚𝙚𝙘𝙝 𝘾𝙖𝙣𝙘𝙚𝙡𝙡𝙚𝙙"
             )
         except Exception as e:
             await i_m_s_e_g.edit_text(
@@ -174,7 +174,7 @@ async def exec_message_f(client, message):
 
 async def upload_document_f(client, message):
     imsegd = await message.reply_text(
-        "processing ..."
+        "𝙇𝙤𝙖𝙙𝙞𝙣𝙜..."
     )
     if message.from_user.id in AUTH_CHANNEL:
         if " " in message.text:
@@ -251,5 +251,5 @@ async def aexec(code, client, message):
 '''
 async def upload_log_file(client, message):
     await message.reply_document(
-        "Torrentleech-Gdrive.txt"
+        "Logfile.txt"
     )
