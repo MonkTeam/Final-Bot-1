@@ -98,9 +98,9 @@ async def upload_to_tg(
             LOGGER.info("TODO")
             d_f_s = humanbytes(os.path.getsize(local_file_name))
             i_m_s_g = await message.reply_text(
-                "Telegram does not support uploading this file.\n"
-                f"Detected File Size: {d_f_s} 😡\n"
-                "\n🤖 trying to split the files 🌝🌝🌚"
+                "𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝙙𝙤𝙚𝙨 𝙣𝙤𝙩 𝙨𝙪𝙥𝙥𝙤𝙧𝙩 𝙪𝙥𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙩𝙝𝙞𝙨 𝙛𝙞𝙡𝙚.\n"
+                f"𝘿𝙚𝙩𝙚𝙘𝙩𝙚𝙙 𝙁𝙞𝙡𝙚 𝙎𝙞𝙯𝙚: {d_f_s} 😡\n"
+                "\n🤖 𝙏𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙨𝙥𝙡𝙞𝙩 𝙩𝙝𝙚 𝙛𝙞𝙡𝙚𝙨 🌝🌝🌚"
             )
             splitted_dir = await split_large_files(local_file_name)
             totlaa_sleif = os.listdir(splitted_dir)
@@ -109,7 +109,7 @@ async def upload_to_tg(
             LOGGER.info(totlaa_sleif)
             ba_se_file_name = os.path.basename(local_file_name)
             await i_m_s_g.edit_text(
-                f"Detected File Size: {d_f_s} 😡\n"
+                f"𝘿𝙚𝙩𝙚𝙘𝙩𝙚𝙙 𝙁𝙞𝙡𝙚 𝙎𝙞𝙯𝙚: {d_f_s} 😡\n"
                 f"<code>{ba_se_file_name}</code> splitted into {number_of_files} files.\n"
                 "𝙏𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙪𝙥𝙡𝙤𝙖𝙙 𝙩𝙤 𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢, 𝙣𝙤𝙬 ..."
             )
@@ -138,7 +138,7 @@ async def upload_to_tg(
 
 async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
     await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
-    del_it = await message.edit_text(f"<a href='tg://user?id={g_id}'>🔊</a> Now Uploading to ☁️ Cloud!!!")
+    del_it = await message.edit_text(f"<a href='tg://user?id={g_id}'>🔊</a> 𝙉𝙤𝙬 𝙐𝙥𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙩𝙤 ☁️ 𝘾𝙡𝙤𝙪𝙙!!!")
     #subprocess.Popen(('touch', 'rclone.conf'), stdout = subprocess.PIPE)
     with open('rclone.conf', 'a', newline="\n", encoding = 'utf-8') as fole:
         fole.write("[DRIVE]\n")
@@ -272,7 +272,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
             message_for_progress_display = message
             if not edit_media:
                 message_for_progress_display = await message.reply_text(
-                    "starting upload of {}".format(os.path.basename(local_file_name))
+                    "𝙐𝙥𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙔𝙤𝙪𝙧 𝙁𝙞𝙡𝙚𝙨:{}".format(os.path.basename(local_file_name))
                 )
             if local_file_name.upper().endswith(("MKV", "MP4", "WEBM")):
                 metadata = extractMetadata(createParser(local_file_name))
