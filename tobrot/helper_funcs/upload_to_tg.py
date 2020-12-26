@@ -246,7 +246,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
             thumb = thumb_image_path
         message_for_progress_display = message
         if not edit_media:
-            message_for_progress_display = await message.reply_text("starting upload of {}".format(os.path.basename(local_file_name)))
+            message_for_progress_display = await message.reply_text("𝙐𝙥𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙔𝙤𝙪𝙧 𝙁𝙞𝙡𝙚𝙨: {}".format(os.path.basename(local_file_name)))
         sent_message = await message.reply_document(
             document=local_file_name,
             # quote=True,
