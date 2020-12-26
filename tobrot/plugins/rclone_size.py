@@ -19,7 +19,7 @@ from pyrogram.types import (
 
 async def check_size_g(client, message):
     #await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
-    del_it = await message.reply_text("🔊 Checking size...wait!!!")
+    del_it = await message.reply_text("🔊 𝘾𝙝𝙚𝙘𝙠𝙞𝙣𝙜 𝙨𝙞𝙯𝙚...𝙬𝙖𝙞𝙩!!!")
     if not os.path.exists('rclone.conf'):
         #subprocess.Popen(('touch', 'rclone.conf'), stdout = subprocess.PIPE)
         with open('rclone.conf', 'a', newline="\n", encoding = 'utf-8') as fole:
@@ -35,7 +35,7 @@ async def check_size_g(client, message):
     gautam = gau.decode("utf-8")
     print(gautam)
     await asyncio.sleep(5)
-    await message.reply_text(f"🔊CloudInfo:\n\n{gautam}")
+    await message.reply_text(f"🔊𝘾𝙡𝙤𝙪𝙙𝙄𝙣𝙛𝙤:\n\n{gautam}")
     await del_it.delete()
 
 #gautamajay52
@@ -43,8 +43,8 @@ async def check_size_g(client, message):
 async def g_clearme(client, message):
     inline_keyboard = []
     ikeyboard = []
-    ikeyboard.append(InlineKeyboardButton("Yes 🚫", callback_data=("fuckingdo").encode("UTF-8")))
-    ikeyboard.append(InlineKeyboardButton("No 🤗", callback_data=("fuckoff").encode("UTF-8")))
+    ikeyboard.append(InlineKeyboardButton("𝙔𝙚𝙨 🚫", callback_data=("fuckingdo").encode("UTF-8")))
+    ikeyboard.append(InlineKeyboardButton("𝙉𝙤 🤗", callback_data=("fuckoff").encode("UTF-8")))
     inline_keyboard.append(ikeyboard)
     reply_markup = InlineKeyboardMarkup(inline_keyboard)
-    await message.reply_text("Are you sure? 🚫 This will delete all your downloads locally 🚫", reply_markup=reply_markup, quote=True)
+    await message.reply_text("𝘼𝙧𝙚 𝙮𝙤𝙪 𝙨𝙪𝙧𝙚? 🚫 𝙏𝙝𝙞𝙨 𝙬𝙞𝙡𝙡 𝙙𝙚𝙡𝙚𝙩𝙚 𝙖𝙡𝙡 𝙮𝙤𝙪𝙧 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙨 𝙡𝙤𝙘𝙖𝙡𝙡𝙮 🚫", reply_markup=reply_markup, quote=True)
