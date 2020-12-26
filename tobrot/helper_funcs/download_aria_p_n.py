@@ -240,9 +240,9 @@ async def call_apropriate_function(
             message_to_send += "</a>"
             message_to_send += "\n"
         if message_to_send != "":
-            mention_req_user = f"<a href='tg://user?id={user_id}'>Your Requested Files</a>\n\n"
+            mention_req_user = f"<a href='tg://user?id={user_id}'>𝙔𝙤𝙪𝙧 𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝙁𝙞𝙡𝙚𝙨</a>\n\n"
             message_to_send = mention_req_user + message_to_send
-            message_to_send = message_to_send + "\n\n" + "#File Uploaded Successfully\n\n🌀<b>Thanks For Using Me😁</b>"
+            message_to_send = message_to_send + "\n\n" + "#𝙁𝙞𝙡𝙚 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮\n\n🌀<b>Thanks For Using Me😁</b>"
         else:
             message_to_send = "<i>FAILED</i> to upload files. 😞😞"
         await user_message.reply_text(
@@ -410,9 +410,9 @@ async def call_apropriate_function_t(
         message_to_send += "</a>"
         message_to_send += "\n"
     if message_to_send != "":
-        mention_req_user = f"<a href='tg://user?id={user_id}'>Your Requested Files</a>\n\n"
+        mention_req_user = f"<a href='tg://user?id={user_id}'>𝙔𝙤𝙪𝙧 𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝙁𝙞𝙡𝙚𝙨</a>\n\n"
         message_to_send = mention_req_user + message_to_send
-        message_to_send = message_to_send + "\n\n" + "#File Uploaded Successfully\n\n🌀<b>Thanks For Using Me 😁</b>"
+        message_to_send = message_to_send + "\n\n" + "#𝙁𝙞𝙡𝙚 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮\n\n🌀<b>Thanks For Using Me 😁</b>"
     else:
         message_to_send = "<i>FAILED</i> to upload files. 😞😞"
     await sent_message_to_update_tg_p.reply_to_message.reply_text(
@@ -444,17 +444,21 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                 except:
                     pass
                 #
-                msg = f"\n<b>○File:</b> `<code>{downloading_dir_name}</code>`"
-                msg += f"\n<b>○Progress:</b> <code>〘 {file.progress_string()} 〙</code> <b>Of</b> <code>〘 {file.total_length_string()} 〙</code>"
-                msg += f"\n<b>○Speed:</b> <code>{file.download_speed_string()} ▲| {file.upload_speed_string()} ▼</code>"
+                msg = f"\n<b>○𝙁𝙞𝙡𝙚:</b> `<code>{downloading_dir_name}</code>`"
+		
+                msg += f"\n<b>○𝙋𝙧𝙤𝙜𝙧𝙚𝙨𝙨:</b> <code>〘 {file.progress_string()} 〙</code> <b>Of</b> <code>〘 {file.total_length_string()} 〙</code>"
+		
+                msg += f"\n<b>○𝙎𝙥𝙚𝙚𝙙:</b> <code>{file.download_speed_string()} ▲| {file.upload_speed_string()} ▼</code>"
                 if is_file is None :
-                   msg += f"\n<b>○Connections:</b> {file.connections}"
+			
+                   msg += f"\n<b>○𝘾𝙤𝙣𝙣𝙚𝙘𝙩𝙞𝙤𝙣𝙨:</b> {file.connections}"
                 else :
-                   msg += f"\n<b>○Peers:</b> <code>{file.connections}</code> | <b>○ Seeders:</b> <code>{file.num_seeders}</code>"
+                   msg += f"\n<b>○𝙋𝙚𝙚𝙧𝙨:</b> <code>{file.connections}</code> | <b>○𝙎𝙚𝙚𝙙𝙚𝙧𝙨:</b> <code>{file.num_seeders}</code>"
  
                 # msg += f"\n<b>○Status:</b> {file.status}"
-                msg += f"\n<b>○Left:</b> {file.eta_string()}"
-                msg += f"\n<b>○GID:</b> <code>{gid}</code>\n\n<b>©:@Fx_Movies || @Fx_Series </b>"
+                msg += f"\n<b>○𝙇𝙚𝙛𝙩:</b> {file.eta_string()}"
+		
+                msg += f"\n<b>○𝙂𝙄𝘿:</b> <code>{gid}</code>\n\n<b>©:@Fx_Movies || @Fx_Series</b>"
                 inline_keyboard = []
                 ikeyboard = []
                 ikeyboard.append(InlineKeyboardButton("⛔️𝘾𝙖𝙣𝙘𝙚𝙡 𝙋𝙧𝙤𝙘𝙚𝙨𝙨𝙞𝙣𝙜⛔️", callback_data=(f"cancel {gid}").encode("UTF-8")))
