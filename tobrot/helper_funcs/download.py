@@ -44,7 +44,7 @@ async def down_load_media_f(client, message):
                 file_name=download_location,
                 progress=progress_for_pyrogram_g,
                 progress_args=(
-                    "trying to download", mess_age, c_time
+                    "𝙏𝙧𝙮𝙞𝙣𝙜 2 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙", mess_age, c_time
                 )
             )
         except Exception as g_e:
@@ -98,7 +98,7 @@ async def download_tg(client, message):
                 file_name=download_location,
                 progress=progress_for_pyrogram_g,
                 progress_args=(
-                    "trying to download", mess_age, c_time
+                    "𝙏𝙧𝙮𝙞𝙣𝙜 2 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙", mess_age, c_time
                 )
             )
         except Exception as g_e:
