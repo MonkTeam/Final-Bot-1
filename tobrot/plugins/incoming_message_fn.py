@@ -241,3 +241,52 @@ async def g_clonee(client, message):
         await gclone.link_gen_size()
     else:
         await message.reply_text("<b>😡FCUK!What have you entered 😒:You should reply to a message, which format should be [ID of Gdrive file/folder Name of the file/folder]\nOr read Github for detailled information</b>")
+        
+        
+       async def rename_tg_file(client, message):
+    usr_id = message.from_user.id
+    if len(message.command) > 1:
+        new_name = '/app/' + message.text.split(" ", maxsplit=1)[1].strip()
+        file = await download_tg(client, message)
+        try:
+            if file:
+                os.rename(file, new_name)
+        except Exception as g_g:
+            await message.reply_text("g_g")
+        response = {}
+        final_response = await upload_to_tg(
+            message,
+            new_name,
+            usr_id,
+            response
+        )
+        LOGGER.info(final_response)
+        try:
+            message_to_send = ""
+            for key_f_res_se in final_response:
+                local_file_name = key_f_res_se
+                message_id = final_response[key_f_res_se]
+                channel_id = str(message.chat.id)[4:]
+                private_link = f"https://t.me/c/{channel_id}/{message_id}"
+                message_to_send += "👉 <a href='"
+                message_to_send += private_link
+                message_to_send += "'>"
+                message_to_send += local_file_name
+                message_to_send += "</a>"
+                message_to_send += "\n"
+            if message_to_send != "":
+                mention_req_user = f"<a href='tg://user?id={usr_id}'>Your Requested Files</a>\n\n"
+                message_to_send = mention_req_user + message_to_send
+                message_to_send = message_to_send + "\n\n" + "#uploads"
+            else:
+                message_to_send = "<i>FAILED</i> to upload files. 😞😞"
+            await message.reply_text(
+                text=message_to_send,
+                quote=True,
+                disable_web_page_preview=True
+            )
+        except Exception as pe:
+            LOGGER.info(pe)
+
+    else:
+        await message.reply_text("Provide new name of the file with extension 😐")
