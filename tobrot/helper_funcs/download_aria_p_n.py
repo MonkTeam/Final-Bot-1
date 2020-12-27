@@ -446,14 +446,14 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                 #
                 msg = f"\n<b>○𝙁𝙞𝙡𝙚: </b> `<code>{downloading_dir_name}</code>`"
 		
-                msg += f"\n<b>○𝙋𝙧𝙤𝙜𝙧𝙚𝙨𝙨: </b> <code>〘 {file.progress_string()} 〙</code> <b>Of</b> <code>〘 {file.total_length_string()} 〙</code>"
+                msg += f"\n<b>○𝙋𝙧𝙤𝙜𝙧𝙚𝙨𝙨: </b> <code>〘{file.progress_string()}〙</code> <b>Of</b> <code>〘{file.total_length_string()}〙</code>"
 		
-                msg += f"\n<b>○𝙎𝙥𝙚𝙚𝙙: </b> <code>〘 {file.download_speed_string()} ▲ 〙|〘 {file.upload_speed_string()} ▼ 〙</code>"
+                msg += f"\n<b>○𝙎𝙥𝙚𝙚𝙙:</b> <code>〘{file.download_speed_string()}〙〘{file.upload_speed_string()}〙</code>"
                 if is_file is None :
 			
                    msg += f"\n<b>○𝘾𝙤𝙣𝙣𝙚𝙘𝙩𝙞𝙤𝙣𝙨: </b> {file.connections}"
                 else :
-                   msg += f"\n<b>○𝙋𝙚𝙚𝙧𝙨: </b> <code>〘 {file.connections}</code>|<b>○𝙎𝙚𝙚𝙙𝙚𝙧𝙨:</b> 〙<code>{file.num_seeders}</code>"
+                   msg += f"\n<b>○𝙋𝙚𝙚𝙧𝙨: </b> <code>〘{file.connections}</code>|<b>○𝙎𝙚𝙚𝙙𝙚𝙧𝙨:</b>〙<code>{file.num_seeders}</code>"
  
                 # msg += f"\n<b>○Status:</b> {file.status}"
                 msg += f"\n<b>○𝙇𝙚𝙛𝙩: </b> {file.eta_string()}"
