@@ -155,7 +155,7 @@ if __name__ == "__main__" :
     #
     rename_message_handler = MessageHandler(
         rename_tg_file,
-        filters=filters.command(["rename"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command(["rename@AiTorrentware6_Bot"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(rename_message_handler)
     #
