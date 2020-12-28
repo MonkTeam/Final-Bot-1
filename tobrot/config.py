@@ -36,7 +36,7 @@ class Config(object):
     SP_LIT_ALGO_RITH_M = os.environ.get(
         "SP_LIT_ALGO_RITH_M",
         "hjs"
-        
+    )
     ARIA_TWO_STARTED_PORT = int(os.environ.get("ARIA_TWO_STARTED_PORT", 6800))
     EDIT_SLEEP_TIME_OUT = int(os.environ.get("EDIT_SLEEP_TIME_OUT", 15))
     MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START = int(os.environ.get("MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START", 600))
