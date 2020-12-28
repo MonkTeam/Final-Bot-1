@@ -128,7 +128,7 @@
     },
     "DEF_THUMB_NAIL_VID_S": {
       "description": "default thumbnail to be used in the videos",
-      "value": "",
+      "value": "https://telegra.ph/file/b0526eab13658ff5e2123.jpg",
       "required": false
     },
     "STATUS_COMMAND": {
