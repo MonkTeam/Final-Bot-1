@@ -14,26 +14,27 @@
     },
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
-      "value": ""
+      "value": "1667813"
     },
     "API_HASH": {
       "description": "Get this value from https://my.telegram.org",
-      "value": ""
+      "value": "1f6921c27bf6cd01aba471a14ff33bcb"
     },
     "TG_BOT_TOKEN": {
       "description": "get this value from @BotFather",
-      "value": ""
+      "value": "1337055626:AAFAHcLvoe-3yhNJGBwsYIdCfp3Rc-zVENQ"
     },
     "AUTH_CHANNEL": {
       "description": "should be an integer. The BOT API ID of the Telegram Group, where the Leecher should work.",
-      "value": ""
+      "value": "-1001491078689 1327934109"
     },
     "OWNER_ID": {
       "description": "should be an integer. ID of owner of bot",
-      "value": ""
+      "value": "1004538768"
     },
     "UPLOAD_AS_DOC": {
       "description": "True/False. If true all files will be uploaded as documents. Default is False.",
+      "value": "True"
       "required": false
     },
     "CHUNK_SIZE": {
@@ -53,62 +54,122 @@
     },
     "MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START": {
       "description": "should be an integer. Number of seconds to wait before cancelling a torrent.",
+      "value": "",
       "required": false
     },
     "FINISHED_PROGRESS_STR": {
       "description": "should be a single character.",
+      "value": "✪ ",
       "required": false
     },
     "UN_FINISHED_PROGRESS_STR": {
       "description": "should be a single character.",
+      "value": "",
       "required": false
     },
     "TG_OFFENSIVE_API": {
-      "description": "should be an URL accepting the FormParams {i}, {m}, and {t}",
+      "description": "should be an URL accepting the FormParams {i}, {m}, and {t}. Default is None.",
+      "value": "None",
       "required": false
     },
     "LEECH_COMMAND": {
       "description": "Enter your custom leech command like /leech@urgroupname and so on. Default is /leech",
+      "value": "getfile@AiTorrentWare1_Bot",
       "required": false
     },
     "INDEX_LINK": {
       "description": "Enter your index link:",
+      "value": "https://bot.aitorrentware.workers.dev/AiTorrentWare1_Bot",
       "required": false
     },
     "GLEECH_COMMAND": {
       "description": "Enter your custom gleech command like /gleech1@urgroupname and so on. Default is /gleech",
+      "value": "loadlink@AiTorrentWare_Bot",
       "required": false
     },
     "TELEGRAM_LEECH_COMMAND_G": {
       "description": "Enter your custom tleech command like /tleech1@urgroupname and so on. Default is /tleech",
+      "value": "loadfile@AiTorrentWare1_Bot",
       "required": false
     },
     "YTDL_COMMAND": {
       "description": "Enter your custom ytdl command like ytdl1@urgroupname and so on. Default is /ytdl.",
+      "value": "utube@AiTorrentWare1_Bot",
       "required": false
     },
     "PYTDL_COMMAND_G": {
       "description": "Enter your custom pytdl command like pytdl1@urgroupname and so on. Default is /pytdl.",
+      "value": "utubelist@AiTorrentWare1_Bot",
       "required": false
     },
     "CANCEL_COMMAND_G": {
       "description": "Enter your custom cancel command like cancel@urgroupname and so on. Default is /cancel.",
+      "value": "cancel",
       "required": false
     },
     "GET_SIZE_G": {
       "description": "Enter your custom getsize command like getsize@urgroupname and so on. Default is /getsize.",
+      "value": "getsize@AiTorrentWare1_Bot",
       "required": false
     },
     "RCLONE_CONFIG": {
       "description": "Enter your copied text from rclone config. Compulsory for /gleech as well as /tleech command ",
+      "value": "",
       "required": false
     },
     "DESTINATION_FOLDER": {
       "description": "Enter your Cloud folder NAME(not ID😅) in which you want to upload/store your files.",
+      "value": "AiTorrentWare1_Bot",
       "required": false
     },
     "CUSTOM_FILE_NAME": {
       "description": "fill with name u want to prefix the file name like ur channel username🙊, keep empty for do nothing, but add to ur config vars even without input.",
+      "value": "",
+      "required": false
+    },
+    "DEF_THUMB_NAIL_VID_S": {
+      "description": "default thumbnail to be used in the videos",
+      "value": "",
+      "required": false
+    },
+    "STATUS_COMMAND": {
+      "description": "current downloading",
+      "value": "sts",
+      "required": false
+    },
+    "SAVE_THUMBNAIL": {
+      "description": "save new thumbnails",
+      "value": "setpic@AiTorrentWare1_Bot",
+      "required": false
+    },
+    "CLEAR_THUMBNAIL": {
+      "description": "clear old thumbnails",
+      "value": "delpic@AiTorrentWare1_Bot",
+      "required": false
+    },
+    "LOG_COMMAND": {
+      "description": "check logs",
+      "value": "log@AiTorrentWare1_Botgetclone@AiTorrentWare1_Bot",
+      "required": false
+    },
+    "CLONE_COMMAND_G": {
+      "description": "clone gdrive links to our drive",
+      "value": "getclone@AiTorrentWare1_Bot",
+      "required": false
+    },
+    "UPLOAD_COMMAND": {
+      "description": "upload downloaded files",
+      "value": "upload",
+      "required": false
+    },
+    "RENEWME_COMMAND": {
+      "description": "clear old files",
+      "value": "renewme",
+      "required": false
+    },
+    "TG_MAX_FILE_SIZE": {
+      "description": "Telegram max file size",
+      "value": "2097152000",
       "required": false
     }
   },
