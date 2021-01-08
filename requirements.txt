@@ -1,5 +1,5 @@
 aiohttp
-aria2p
+aria2p>=0.9.0,<0.15.0
 hachoir
 Pillow
 appdirs
